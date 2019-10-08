@@ -1,0 +1,27 @@
+// a program to count the number of vowels and consonants in a string using pointer.
+
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+main()
+{
+    char s[100];   //array to store string
+    int vow=0,con=0;
+    char *p;   // pointer declared
+    cout<<"Enter the string : ";
+    gets(s);
+    p=s;   // pointer pointing to first element of array
+   while(*p)   // loop till string is not over
+   {
+       if((*p>='A'&&*p<='Z')||(*p>='a'&&*p<='z'))
+   {
+       if(*p=='a'||*p=='e'||*p=='i'||*p=='o'||*p=='u'||*p=='A'||*p=='E'||*p=='I'||*p=='O'||*p=='U')
+        vow++;
+       else
+        con++;
+   }
+        p++;
+   }
+   cout<<"No. of vowels: "<<vow<<"\nNo. of Consonants : "<<con;
+   return 0;
+}
